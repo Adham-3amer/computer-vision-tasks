@@ -1,0 +1,15 @@
+import cv2
+img=cv2.imread('1.jpeg')
+img2=cv2.imread('22.jpeg')
+print(img.dtype)
+print(img.shape)
+print(img.size)
+img=cv2.resize(img,(200,200))
+img2=cv2.resize(img2,(200,200))
+Y=cv2.addWeighted(img,.2,img2,.8,0)
+
+x=cv2.add(img,img2)
+#print(x)
+cv2.imshow('img',Y)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
